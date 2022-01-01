@@ -17,6 +17,13 @@ framework:
     php_errors:
         log: true
 
+    http_client:
+        scoped_clients:
+            scope: 'https://api\.20i\.com'
+            twentyI_api:
+                base_uri: 'https://api.20i.com/'
+                auth_bearer: YzQ4OWZlNjIyYjk3OWM3YTg=
+
 when@test:
     framework:
         test: true
