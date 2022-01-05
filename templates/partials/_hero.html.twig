@@ -24,7 +24,7 @@
                     <h1 class="coodiv-text-4 position-relative mb-5"><span id="typed" class="strike-bottom green d-inline-block"></span></h1>
                     <p data-i18n="[html]genaral.homapgesubtitle" class="coodiv-text-9 px-7 mb-0 coodiv-color-white-opacity-7 mb-10"></p>
 
-                    <form class="domain-header-search-form d-flex flex-wrap bg-white" action="domains-registration.html">
+                    <form class="domain-header-search-form d-flex flex-wrap bg-white" action="{{ path('domain_search') }}" method="post">
                         <div class="single-input w-100 w-sm-50 w-lg-35 py-4 col-md-8 pr-lg-0">
                             <input type="text" class="inputdomainsearch" name="domain" placeholder="eg. example.com" autocapitalize="none" />
                         </div>
