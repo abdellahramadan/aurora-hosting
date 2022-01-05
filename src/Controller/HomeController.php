@@ -4,15 +4,13 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
-use TwentyI\API\Services;
-use function Symfony\Config\Monolog\headers;
+use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
     private $client;
-    const OAUTH = 'c83d9a27d81a326a4';
+    const OAUTH = 'Y2M1NTE0YjE3ZWU2M2ZiMjU=';
 
     public function __construct(HttpClientInterface $client)
     {
@@ -24,7 +22,7 @@ class HomeController extends AbstractController
     {
         $response = $this->client->request('GET', 'https://api.20i.com/domain', [
 
-            //'auth_bearer' => 'YzQ4OWZlNjIyYjk3OWM3YTg=',
+            'auth_bearer' => self::OAUTH,
 
         ]);
 
