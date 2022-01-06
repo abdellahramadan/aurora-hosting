@@ -25,8 +25,10 @@ import './plugins/fancybox/jquery.fancybox.min.js';
 import './plugins/waypoints/jquery.waypoints.min.js';
 import './plugins/typed/typed.min.js';
 import './plugins/particles/particles.js';
+import './plugins/particles/particles-code';
 import './plugins/parallax/parallax.js';
 import './plugins/smoothscroll/smoothscroll.js';
+
 
 import './js/custom.js';
 // start the Stimulus application

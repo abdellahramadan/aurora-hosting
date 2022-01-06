@@ -19,10 +19,10 @@ framework:
 
     http_client:
         scoped_clients:
-            scope: 'https://api\.20i\.com'
             twentyI_api:
-                base_uri: 'https://api.20i.com/'
-                auth_bearer: YzQ4OWZlNjIyYjk3OWM3YTg=
+                scope: 'https://api\.20i\.com'
+                #base_uri: 'https://api.20i.com/'
+                auth_bearer: 'Bearer Y2M1NTE0YjE3ZWU2M2ZiMjU='
 
 when@test:
     framework:
