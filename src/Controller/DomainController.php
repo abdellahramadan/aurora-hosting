@@ -11,7 +11,7 @@ use function Arrayy\create as a;
 
 class DomainController extends AbstractController
 {
-    const OAUTH = 'Y2M1NTE0YjE3ZWU2M2ZiMjU=';
+    //protected $OAuth = $_ENV('api_token');
     private $client;
 
     public function __construct(HttpClientInterface $client)
@@ -36,7 +36,7 @@ class DomainController extends AbstractController
             $domainTerm = $request->request->get('domain');
 
             $response = $this->client->request('GET', 'https://api.20i.com/domain-search/' . $domainTerm, [
-                'auth_bearer' => self::OAUTH
+                'auth_bearer' => $this->getParameter('app.api_token')
             ]);
 
             $domainName = $response->toArray();

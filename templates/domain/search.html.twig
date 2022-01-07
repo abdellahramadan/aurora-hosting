@@ -19,7 +19,7 @@
             <div class="t-second d-none-mobile"><img class="layer layer2" data-depth="-0.20" src="{{ asset('image/header/sat.png') }}" alt="" /></div>
         </div>
 
-        <div class="container">
+        <div class="container" data-controller="domain_search">
             <div class="row justify-content-center align-items-center pb-30 position-relative coodiv-z-index-2">
                 <div class="col-11 col-md-12 col-lg-9 order-lg-1"  data-aos-duration="500" >
                     <div class="hero-content mt-11 mt-lg-0">
@@ -31,7 +31,12 @@
 
                         <form class="domain-search-form mb-13" action="{{ path('domain_search') }}" method="post">
                             <div class="domain-search position-relative">
-                                <input class="domain-search-input-header pl-6" type="text" name="domain" data-role="input-typewrite" required="" aria-label="Register a Domain Name" placeholder="domain.info" />
+                                <input class="domain-search-input-header pl-6" type="text" name="domain"
+                                       data-role="input-typewrite" required="" aria-label="Register a Domain Name"
+                                       placeholder="domain.info"
+                                       data-domain-search-target="domain"
+                                       data-action="input->domain-search#search"
+                                />
                                 <button type="submit" class="btn btn-warning domain-search-button-header position-absolute" role="button" aria-label="Search Domain Name">Search</button>
                             </div>
                         </form>
